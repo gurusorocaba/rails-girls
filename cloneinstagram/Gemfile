@@ -1,0 +1,28 @@
+source 'https://rubygems.org'
+
+gem 'rails', '~> 5.1.1'
+
+gem 'coffee-rails'
+gem 'jbuilder'
+gem 'jquery-rails'
+gem 'puma'
+gem 'sass-rails'
+gem 'pg'
+gem 'turbolinks'
+gem 'uglifier'
+gem 'bootstrap', '~> 4.0.0.alpha5'
+gem 'rails-i18n'
+gem 'devise'
+gem 'devise-i18n'
+gem 'paperclip'
+gem 'will_paginate'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
+
+group :development do
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'letter_opener'
+end
