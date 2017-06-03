@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cloneinstagram</title>
+    <title>Instagram clone</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,22 @@
   </head>
 
   <body>
-    <%= yield %>
-  </body>
-</html>
+    <div class='container'>
+      <nav class="navbar navbar-dark bg-primary">
+        <%= link_to 'Instagram clone', root_path, class: 'navbar-brand' %>
+
+        <div class='row'>
+          <div class='col-sm-12'>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-sm-12'>
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </body>
+  </html>
