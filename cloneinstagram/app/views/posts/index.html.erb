@@ -1,0 +1,23 @@
+<% @posts.each do |post| %>
+  <div class="row">
+    <div class="col-md-2">
+      <%= link_to post do %>
+        <%= image_tag post.photo.url(:thumb) %>
+      <% end %>
+    </div>
+
+    <div class="col-md-6">
+      <%= link_to post do %>
+        <h2><%= post.title %></h2>
+      <% end %>
+
+      <%= link_to 'Editar', edit_post_path(post) %>
+      <%= link_to 'Apagar', post, method: :delete, data: { confirm: 'Você tem certeza?' } %>
+    </div>
+
+    <div class="col-md-4">
+      Postado por <strong><%= post.user.email %></strong>.
+    </div>
+  </div>
+  <hr>
+<% end %>

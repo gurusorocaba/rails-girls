@@ -1,29 +1,34 @@
-#ROADMAP
+# Instagram Clone
 
-## 22/12/2016
-- Start
+## Enter directory
+```
+cd cloneinstagram
+```
 
-## 02/12/2016 à 13/01/2017
-- Definir local
-- Definir orçamento
+## Create Database
+```
+rails db:create
+```
 
-## 13/01/2017 à 27/01/2017
-- Patrocínio
-- Definir talks
-- Definir os mentores e voluntários
-- Começar a divulgação (redes sociais, faculs, etc)
+## Run migrations
+```
+rails db:migrate
+```
 
-## 04/02/2017
-- Treinamento para os mentores
+## Install ImageMagick
+ImageMagick is needed in order to deal with images
 
-## 01/02/2017 à 17/02/2017
-- Período de inscrições
+### OS X
+```
+brew install imagemagick
+```
 
-## 17/02/2017 à 24/02/2017
-- Período de confirmação
+### Ubuntu (or any Debian base Linux distribution)
+```
+sudo apt-get install imagemagick -y
+```
 
-## a partir do 27/02/2017
-- Divulgação dos selecionados
-
-## 31/03/2017 à 01/04/2017
- - Evento
+## Run application
+```
+rails s
+```
