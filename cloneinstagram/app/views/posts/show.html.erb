@@ -1,17 +1,7 @@
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<%= image_tag @post.photo %>
+<%= @post.title %>
 
-<p>
-  <strong>Photo:</strong>
-  <%= @post.photo %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @post.user %>
-</p>
+<%= @post.user %>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
