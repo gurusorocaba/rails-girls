@@ -13,18 +13,35 @@
       <nav class="navbar navbar-dark bg-primary">
         <%= link_to 'Instagram clone', root_path, class: 'navbar-brand' %>
 
-        <div class='row'>
-          <div class='col-sm-12'>
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
-          </div>
-        </div>
+        <ul class='nav navbar-nav'>
+          <% if current_user %>
+            <li class='nav-item'>
+              <%= link_to 'Novo post', new_post_path, class: 'nav-link' %>
+            </li>
 
-        <div class='row'>
-          <div class='col-sm-12'>
-            <%= yield %>
-          </div>
+            <li class='nav-item float-xs-right'>
+              <span class="navbar-text"><%= current_user.email %></span>
+            </li>
+
+            <li class='nav-item float-xs-right'>
+              <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+            </li>
+          <% end %>
+        </ul>
+      </nav>
+
+      <div class='row'>
+        <div class='col-sm-12'>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
         </div>
       </div>
-    </body>
-  </html>
+
+      <div class='row'>
+        <div class='col-sm-12'>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
