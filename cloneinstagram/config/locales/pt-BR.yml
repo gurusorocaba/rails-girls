@@ -1,0 +1,15 @@
+pt-BR:
+  activerecord:
+    models:
+      post: Post
+
+    attributes:
+      post:
+        title: Título
+        user: Usuário
+        created_at: Postado em
+
+  will_paginate:
+    previous_label: "&#8592; Anterior"
+    next_label: "Próximo &#8594;"
+    page_gap: "&hellip;"
