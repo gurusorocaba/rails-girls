@@ -10,20 +10,20 @@
 
   <body>
     <div class='container'>
-      <nav class="navbar navbar-dark bg-primary">
+      <nav class="navbar navbar-inverse bg-inverse">
         <%= link_to 'Instagram clone', root_path, class: 'navbar-brand' %>
 
-        <ul class='nav navbar-nav'>
+        <ul class='nav justify-content-end'>
           <% if current_user %>
-            <li class='nav-item'>
+            <li class='nav-item '>
               <%= link_to 'Novo post', new_post_path, class: 'nav-link' %>
             </li>
 
-            <li class='nav-item float-xs-right'>
+            <li class='nav-item '>
               <span class="navbar-text"><%= current_user.email %></span>
             </li>
 
-            <li class='nav-item float-xs-right'>
+            <li class='nav-item'>
               <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
             </li>
           <% end %>
